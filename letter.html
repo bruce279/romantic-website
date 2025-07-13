@@ -10,7 +10,7 @@
       background: linear-gradient(to right, #ffe0ec, #ffeac1);
       font-family: 'Georgia', serif;
       height: 100vh;
-      overflow: hidden;
+      overflow-x: hidden;
       position: relative;
     }
 
@@ -23,10 +23,8 @@
       font-size: 18px;
       line-height: 1.6;
       color: #444;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      position: relative;
+      margin: 80px auto;
       z-index: 10;
     }
 
@@ -34,7 +32,7 @@
       max-width: 100%;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+      margin: 20px 0;
     }
 
     .signature {
@@ -45,11 +43,12 @@
       color: #888;
     }
 
-    .typewriter {
+    .typewriter span {
+      display: inline-block;
       overflow: hidden;
       white-space: nowrap;
-      border-right: 2px solid #888;
-      animation: typing 8s steps(80, end), blink 1s step-end infinite;
+      animation: typing 7s steps(90) forwards, blink 1s step-end infinite;
+      border-right: 2px solid black;
     }
 
     @keyframes typing {
@@ -65,9 +64,10 @@
     .tulip {
       position: absolute;
       top: -50px;
-      animation: fall 6s linear infinite;
+      animation: fall 7s linear infinite;
       width: 30px;
       z-index: 1;
+      pointer-events: none;
     }
 
     @keyframes fall {
@@ -78,40 +78,52 @@
 </head>
 <body>
 
-  <!-- Music -->
+  <!-- Background Music -->
   <audio autoplay loop>
-    <source src="https://github.com/rohitdhas/audio-host/raw/main/dil-ka-jo-haal-hai.mp3" type="audio/mp3">
+    <source src="dil-ka-haal.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
   </audio>
 
-  <!-- Tulips -->
-  <img class="tulip" src="https://i.ibb.co/Jd65sPX/tulip.png" style="left: 10%;" />
-  <img class="tulip" src="https://i.ibb.co/Jd65sPX/tulip.png" style="left: 30%;" />
-  <img class="tulip" src="https://i.ibb.co/Jd65sPX/tulip.png" style="left: 50%;" />
-  <img class="tulip" src="https://i.ibb.co/Jd65sPX/tulip.png" style="left: 70%;" />
-  <img class="tulip" src="https://i.ibb.co/Jd65sPX/tulip.png" style="left: 90%;" />
+  <!-- Falling Tulips -->
+  <img class="tulip" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Pink_tulip_-_floriade_canberra.jpg" style="left: 10%;" />
+  <img class="tulip" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Pink_tulip_-_floriade_canberra.jpg" style="left: 30%;" />
+  <img class="tulip" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Pink_tulip_-_floriade_canberra.jpg" style="left: 50%;" />
+  <img class="tulip" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Pink_tulip_-_floriade_canberra.jpg" style="left: 70%;" />
+  <img class="tulip" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Pink_tulip_-_floriade_canberra.jpg" style="left: 90%;" />
 
-  <!-- Letter -->
+  <!-- Letter Box -->
   <div class="letter-box">
-    <!-- Shoes Image -->
-    <img src="https://i.ibb.co/7XJtccv/Chat-GPT-Image-Mar-28-2025-09-33-11-PM.png" alt="Our Shoes" />
 
+    <!-- Image 1: Shoes -->
+    <img src="shoes.png" alt="Our Shoes" />
+
+    <!-- Typewriter Letter -->
     <div class="typewriter">
-      My dearest love, <br><br>
-      Every heartbeat of mine echoes your name.  
-      Since the moment you entered my life, it has felt like the stars aligned just for us.  
-      Your presence is peace, your voice is home, and your love — it’s the most beautiful thing I’ve ever known.  
-      <br><br>
-      I promise, no matter what comes our way, I'll always choose you. Again and again.  
-      Always you. Always us. 💫  
+      <span>
+        My dearest love,  
+        <br><br>
+        Every heartbeat of mine echoes your name. Since the moment you entered my life, it has felt like the stars aligned just for us.  
+        <br><br>
+        Your presence is peace, your voice is home, and your love — it’s the most beautiful thing I’ve ever known.  
+        <br><br>
+        I promise, no matter what comes our way, I’ll always choose you. Again and again.  
+        <br><br>
+        Always you. Always us. 💫  
+      </span>
     </div>
 
-    <!-- Couple Image -->
-    <img src="https://i.ibb.co/7vYcXPH/1bf82a9b-2dbe-4b79-af1b-29948855cfa0.png" alt="Us" />
+    <!-- Image 2: Couple -->
+    <img src="couple.png" alt="Us" />
+
+    <!-- Signature -->
     <div class="signature">
-      — Yours forever, Batman🖤<br>
-      <small style="display:block; text-align: right; font-size: 13px; color:#aaa;">"here i got stuck 👀"</small>
+      — Yours forever, Batman 🖤<br>
+      <small>"here i got stuck 👀"</small>
     </div>
+
   </div>
 
 </body>
 </html>
+
+
