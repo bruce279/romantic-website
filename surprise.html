@@ -112,5 +112,12 @@
   Your browser does not support the audio element.
 </audio>
 
+<script>
+  window.addEventListener('click', function () {
+    const audio = document.querySelector('audio');
+    if (audio) audio.play();
+  }, { once: true });
+</script>
+
 </body>
 </html>
