@@ -96,3 +96,29 @@ p {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
+.poetry-body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd6e8, #c2f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Georgia', serif;
+}
+
+.poetry-container {
+  max-width: 700px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.poetry-box p {
+  font-size: 1.3rem;
+  color: #444;
+  line-height: 1.8;
+  white-space: pre-line;
+}
