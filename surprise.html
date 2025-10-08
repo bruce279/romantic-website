@@ -114,6 +114,70 @@
   <source src="bg-music.mp3" type="audio/mpeg">
 </audio>
 
+<!-- Timeline / Progress Bar -->
+<div class="timeline">
+  <a href="index.html" class="dot" id="page1">1</a>
+  <span>→</span>
+  <a href="letter.html" class="dot" id="page2">2</a>
+  <span>→</span>
+  <a href="surprise.html" class="dot" id="page3">3</a>
+  <span>→</span>
+  <a href="months.html" class="dot" id="page4">4</a>
+  <span>→</span>
+  <a href="poetry.html" class="dot" id="page5">5</a>
+</div>
+
+<style>
+.timeline {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Dancing Script', cursive;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.4);
+}
+
+.timeline .dot {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  padding: 6px 12px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.timeline .dot:hover {
+  background: rgba(255, 182, 193, 0.3);
+  box-shadow: 0 0 10px #ffb6c1;
+}
+
+.timeline span {
+  color: #ffb6c1;
+}
+
+.active {
+  background: rgba(255, 182, 193, 0.5);
+  box-shadow: 0 0 15px #ff8fd4, 0 0 30px #d87fff;
+  color: #fff;
+}
+</style>
+
+<script>
+// Highlight current page in timeline
+const currentPage = window.location.pathname.split("/").pop();
+if (currentPage.includes("index")) document.getElementById("page1").classList.add("active");
+if (currentPage.includes("letter")) document.getElementById("page2").classList.add("active");
+if (currentPage.includes("surprise")) document.getElementById("page3").classList.add("active");
+if (currentPage.includes("months")) document.getElementById("page4").classList.add("active");
+if (currentPage.includes("poetry")) document.getElementById("page5").classList.add("active");
+</script>
 
 </body>
 </html>
